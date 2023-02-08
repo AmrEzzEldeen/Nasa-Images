@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASA API Pictures</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="https://s2.googleusercontent.com/s2/favicons?domain=www.nasa.gov">
+    <!-- ZTM Favicon -->
+    <!-- <link rel="icon" type="image/png" href="favicon.png"> -->
+</head>
+
+<body>
+    <!-- loader -->
+    <div class="loader hidden">
+        <img src="rocket.svg" alt="loading rocket animation">
+        <p class="hidden">You've viewed too many photos, take a break and try again later🙂</p>
+    </div>
+    <div class="container">
+        <!-- navigation -->
+        <div class="navigation-container">
+            <span class="background"></span>
+            <!-- results nav -->
+            <span class="navigation-items" id="resultsNav">
+                <h3 class="clickable" onclick="updateDOM('favorites')">Favorites</h3>
+                <h3>&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;</h3>
+                <h3 class="clickable" onclick="getNasaPictures()">Load more</h3>
+            </span>
+            <!-- favorites nav -->
+            <span class="navigation-items hidden" id="favoritesNav">
+                <h3 class="clickable" onclick="getNasaPictures()">Load more NASA images</h3>
+            </span>
+        </div>
+        <!-- images container  -->
+        <div class="images-container">
+            <!-- <div class="card">
+                <a href="#" title="view full image" target="_blank">
+                    <img src="https://apod.nasa.gov/apod/image/2302/NGC_2626_CDK_700_II_20_Jan_2023.jpg" alt="Nasa picture of the day" class="card-image-top">
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title">Title of image</h5>
+                    <p class="clickable"></p>
+                    <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus dolores
+                        assumenda itaque dignissimos magnam. Quaerat libero ratione consequatur aliquam voluptates modi
+                        corporis provident, voluptatem quia rerum quibusdam recusandae, exercitationem alias, Lorem
+                        ipsum, dolor sit amet consectetur adipisicing elit. Odio distinctio consequatur similique
+                        tempore dicta. Modi aut, porro adipisci esse sunt maiores sapiente eius nobis quo veniam error,
+                        perferendis pariatur. Odio.
+                    </p>
+                    <small class="text-muted">
+                        <strong>12-12-2023</strong>
+                        <span>Copyright info</span>
+                    </small>
+                </div>
+            </div>
+            <div class="card">
+                <a href="#" title="view full image" target="_blank">
+                    <img src="https://apod.nasa.gov/apod/image/2302/NGC_2626_CDK_700_II_20_Jan_2023.jpg" alt="Nasa picture of the day" class="card-image-top">
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title">Title of image</h5>
+                    <p class="clickable"></p>
+                    <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus dolores
+                        assumenda itaque dignissimos magnam. Quaerat libero ratione consequatur aliquam voluptates modi
+                        corporis provident, voluptatem quia rerum quibusdam recusandae, exercitationem alias, Lorem
+                        ipsum, dolor sit amet consectetur adipisicing elit. Odio distinctio consequatur similique
+                        tempore dicta. Modi aut, porro adipisci esse sunt maiores sapiente eius nobis quo veniam error,
+                        perferendis pariatur. Odio.
+                    </p>
+                    <small class="text-muted">
+                        <strong>12-12-2023</strong>
+                        <span>Copyright info</span>
+                    </small>
+                </div>
+            </div> -->
+        </div>
+    </div>
+    <!-- save confirmation -->
+    <div class="save-confirmed" hidden>
+        <h1>Added!</h1>
+    </div>
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+
+</html>
